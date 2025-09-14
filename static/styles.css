@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffe6e6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #ff0000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.info-btn {
+    background: #00f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.info-text {
+    display: none;
+    font-size: 12px;
+    color: #555;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Heart floating background */
+#heart-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: polygon(50% 0%, 61% 15%, 75% 15%, 85% 30%, 100% 50%, 75% 85%, 50% 100%, 25% 85%, 0% 50%, 15% 30%, 25% 15%, 39% 15%);
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
