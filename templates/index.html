@@ -26,20 +26,25 @@
     text-align: center;
     color: #e74c3c;
   }
+
+  /* Form labels and inputs aligned in one line */
   form label {
     display: flex;
-    justify-content: space-between;
+    align-items: center; /* vertically center inputs and buttons */
+    gap: 10px;           /* spacing between elements */
     margin-top: 15px;
     font-weight: 500;
   }
+
   form input {
-    width: 70%;
+    flex: 1;             /* input takes remaining space */
     padding: 8px;
-    margin-left: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+    margin-left: 0;      /* remove previous margin */
   }
+
   .info-btn {
     background: #3498db;
     color: white;
